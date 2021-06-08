@@ -3,7 +3,42 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
+
+:root {
+    --font-primary: "Baloo da 2", serif;
+    --font-secundary: "Josefin Slab", serif;
+    --font-action: "Mulish", serif;
+}
+
+
+/*MENU*/
+
+.hamburguer {
+    /* background-color: red;*/
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: .1rem;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 1px #000;
+}
+
+
+/*cabeçalho incial IMAGEM*/
 
 header {
     width: 100%;
@@ -42,10 +77,13 @@ header {
     left: 15%;
 }
 
+
+/*cabeçalho incial TEXTO E BOTÃO*/
+
 .banner h1 {
     color: #ffffff;
     font-size: 3.5rem;
-    font-family: "Baloo da 2", serif;
+    font-family: var(--font-primary);
     font-weight: 200;
     text-shadow: 0.2rem 0.2rem 2px rgba(0, 0, 0, .4);
     line-height: 3.5rem;
@@ -55,7 +93,7 @@ header {
 }
 
 .banner p {
-    font-family: "Josefin Slab", serif;
+    font-family: var(--font-secundary);
     color: white;
     font-size: 2rem;
     text-shadow: 0.2rem 0.2rem rgba(0, 0, 0, .4);
@@ -65,7 +103,7 @@ header {
 }
 
 .banner button {
-    font-family: "Muli", serif;
+    font-family: var(--font-action);
     color: white;
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -96,4 +134,63 @@ header {
         transform: translateY(0) rotateY(0);
         opacity: 1;
     }
+}
+
+
+/*conteúdo do MENU*/
+
+.sidebar {
+    width: 20rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.menu-link {
+    font-family: var(--font-action);
+    font-size: 1.5rem;
+    color: #555;
+    transition: color;
+}
+
+.menu-link:hover {
+    color: #9733EE;
+    font-weight: 500;
+}
+
+.social-media {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-media i {
+    color: #555;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.social-media i:hover {
+    color: #9733EE;
 }
